@@ -12,9 +12,9 @@
 #include <iomanip>
 using namespace std;
 
-// ─────────────────────────────────────────────────────────
+// ---------------------------------------------------------
 //  ESTRUCTURAS
-// ─────────────────────────────────────────────────────────
+// ---------------------------------------------------------
 
 struct Empleado {
     int    codigo;
@@ -34,15 +34,15 @@ struct Nodo {
     }
 };
 
-// ─────────────────────────────────────────────────────────
+// ---------------------------------------------------------
 //  CLASE BST
-// ─────────────────────────────────────────────────────────
+// ---------------------------------------------------------
 
 class ArbolBST {
 private:
     Nodo* raiz;
 
-    // ── INSERTAR ──────────────────────────────────────────
+    // -- INSERTAR ------------------------------------------
     Nodo* insertar(Nodo* nodo, Empleado emp) {
         if (nodo == nullptr)
             return new Nodo(emp);
@@ -57,7 +57,7 @@ private:
         return nodo;
     }
 
-    // ── BUSCAR ────────────────────────────────────────────
+    // -- BUSCAR --------------------------------------------
     Nodo* buscar(Nodo* nodo, int codigo) {
         if (nodo == nullptr || nodo->dato.codigo == codigo)
             return nodo;
@@ -67,7 +67,7 @@ private:
             return buscar(nodo->derecho,   codigo);
     }
 
-    // ── RECORRIDOS ────────────────────────────────────────
+    // -- RECORRIDOS ----------------------------------------
     void inorden(Nodo* nodo) {
         if (nodo != nullptr) {
             inorden(nodo->izquierdo);
@@ -92,7 +92,7 @@ private:
         }
     }
 
-    // ── ALTURA ────────────────────────────────────────────
+    // -- ALTURA --------------------------------------------
     int altura(Nodo* nodo) {
         if (nodo == nullptr) return 0;
         int izq = altura(nodo->izquierdo);
@@ -100,7 +100,7 @@ private:
         return 1 + max(izq, der);
     }
 
-    // ── HOJAS ─────────────────────────────────────────────
+    // -- HOJAS ---------------------------------------------
     void mostrarHojas(Nodo* nodo) {
         if (nodo != nullptr) {
             if (nodo->izquierdo == nullptr && nodo->derecho == nullptr)
@@ -110,13 +110,13 @@ private:
         }
     }
 
-    // ── CONTAR NODOS ──────────────────────────────────────
+    // -- CONTAR NODOS --------------------------------------
     int contarNodos(Nodo* nodo) {
         if (nodo == nullptr) return 0;
         return 1 + contarNodos(nodo->izquierdo) + contarNodos(nodo->derecho);
     }
 
-    // ── ELIMINAR ──────────────────────────────────────────
+    // -- ELIMINAR ------------------------------------------
     Nodo* encontrarMinimo(Nodo* nodo) {
         while (nodo->izquierdo != nullptr)
             nodo = nodo->izquierdo;
@@ -151,7 +151,7 @@ private:
         return nodo;
     }
 
-    // ── IMPRIMIR FILA FORMATEADA ──────────────────────────
+    // -- IMPRIMIR FILA FORMATEADA --------------------------
     void imprimirFila(Nodo* nodo) {
         cout << "  | "
              << setw(6) << left  << nodo->dato.codigo
@@ -162,7 +162,7 @@ private:
              << " |" << endl;
     }
 
-    // ── ENCABEZADO DE TABLA ───────────────────────────────
+    // -- ENCABEZADO DE TABLA -------------------------------
     void encabezadoTabla() {
         cout << "\n  +" << string(8,'-') << "+" << string(27,'-')
              << "+" << string(24,'-') << "+" << endl;
@@ -185,7 +185,7 @@ private:
 public:
     ArbolBST() { raiz = nullptr; }
 
-    // ── PUBLICAS ──────────────────────────────────────────
+    // -- PUBLICAS ------------------------------------------
 
     void insertarEmpleado(Empleado emp) {
         raiz = insertar(raiz, emp);
@@ -260,9 +260,9 @@ public:
     }
 };
 
-// ─────────────────────────────────────────────────────────
+// ---------------------------------------------------------
 //  UTILIDADES DE INTERFAZ
-// ─────────────────────────────────────────────────────────
+// ---------------------------------------------------------
 
 void limpiarPantalla() {
 #ifdef _WIN32
@@ -280,41 +280,41 @@ void pausar() {
 
 void cabecera() {
     cout << "\n";
-    cout << "  ╔══════════════════════════════════════════════════╗\n";
-    cout << "  ║      ARBOL BST  -  ORGANIGRAMA EMPRESARIAL      ║\n";
-    cout << "  ║          Estructura de Datos  |  C++             ║\n";
-    cout << "  ╚══════════════════════════════════════════════════╝\n";
+    cout << "  +--------------------------------------------------+\n";
+    cout << "  |      ARBOL BST  -  ORGANIGRAMA EMPRESARIAL       |\n";
+    cout << "  |          Estructura de Datos  |  C++             |\n";
+    cout << "  +--------------------------------------------------+\n";
 }
 
 void menu() {
     cout << "\n";
-    cout << "  ┌─────────────────────────────────┐\n";
-    cout << "  │           MENU PRINCIPAL        │\n";
-    cout << "  ├─────────────────────────────────┤\n";
-    cout << "  │  1. Insertar empleado           │\n";
-    cout << "  │  2. Buscar empleado             │\n";
-    cout << "  │  3. Eliminar empleado           │\n";
-    cout << "  │  4. Mostrar raiz                │\n";
-    cout << "  │  5. Recorrido inorden           │\n";
-    cout << "  │  6. Recorrido preorden          │\n";
-    cout << "  │  7. Recorrido postorden         │\n";
-    cout << "  │  8. Altura del arbol            │\n";
-    cout << "  │  9. Nodos hoja                  │\n";
-    cout << "  │ 10. Total de empleados          │\n";
-    cout << "  │  0. Salir                       │\n";
-    cout << "  └─────────────────────────────────┘\n";
+    cout << "  +---------------------------------+\n";
+    cout << "  |           MENU PRINCIPAL        |\n";
+    cout << "  +---------------------------------+\n";
+    cout << "  |  1. Insertar empleado           |\n";
+    cout << "  |  2. Buscar empleado             |\n";
+    cout << "  |  3. Eliminar empleado           |\n";
+    cout << "  |  4. Mostrar raiz                |\n";
+    cout << "  |  5. Recorrido inorden           |\n";
+    cout << "  |  6. Recorrido preorden          |\n";
+    cout << "  |  7. Recorrido postorden         |\n";
+    cout << "  |  8. Altura del arbol            |\n";
+    cout << "  |  9. Nodos hoja                  |\n";
+    cout << "  | 10. Total de empleados          |\n";
+    cout << "  |  0. Salir                       |\n";
+    cout << "  +---------------------------------+\n";
     cout << "  Seleccione una opcion: ";
 }
 
-// ─────────────────────────────────────────────────────────
+// ---------------------------------------------------------
 //  MAIN
-// ─────────────────────────────────────────────────────────
+// ---------------------------------------------------------
 
 int main() {
     ArbolBST arbol;
     int opcion;
 
-    // ── Cargar datos de prueba automáticamente ────────────
+    // -- Cargar datos de prueba automÃ¡ticamente ------------
     Empleado prueba[] = {
         {50, "Empresa UTA",       "Raiz / Empresa"     },
         {30, "Gerente de Ventas", "Nodo Interno"       },
@@ -403,7 +403,7 @@ int main() {
                 break;
 
             case 0:
-                cout << "\n  Hasta luego!\n\n";
+                cout << "\n  Hasta luego\n\n";
                 break;
 
             default:
