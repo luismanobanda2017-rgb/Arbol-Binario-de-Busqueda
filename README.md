@@ -1,9 +1,9 @@
 # &#x20;  Árbol BST — Organigrama Empresarial en C++
 
-> \\\*\\\*Asignatura:\\\*\\\* Estructura de Datos  
-> \\\*\\\*Tema:\\\*\\\* Árboles Binarios de Búsqueda (BST)  
-> \\\*\\\*Universidad:\\\*\\\* Universidad Técnica de Ambato  
-> \\\*\\\*Ciclo:\\\*\\\* Enero – Julio 2026  
+> Asignatura: Estructura de Datos  
+> Tema: Árboles Binarios de Búsqueda (BST)  
+> Universidad: Universidad Técnica de Ambato  
+> Ciclo: Enero – Julio 2026  
 
 \---
 
