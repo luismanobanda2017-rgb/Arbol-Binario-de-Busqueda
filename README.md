@@ -1,9 +1,9 @@
 # &#x20;  Árbol BST — Organigrama Empresarial en C++
 
-> \*\*Asignatura:\*\* Estructura de Datos  
-> \*\*Tema:\*\* Árboles Binarios de Búsqueda (BST)  
-> \*\*Universidad:\*\* Universidad Técnica de Ambato  
-> \*\*Ciclo:\*\* Enero – Julio 2026  
+> \\\*\\\*Asignatura:\\\*\\\* Estructura de Datos  
+> \\\*\\\*Tema:\\\*\\\* Árboles Binarios de Búsqueda (BST)  
+> \\\*\\\*Universidad:\\\*\\\* Universidad Técnica de Ambato  
+> \\\*\\\*Ciclo:\\\*\\\* Enero – Julio 2026  
 
 \---
 
@@ -37,12 +37,12 @@ arbol-bst-empresa-cpp/
 │   └── main.cpp          ← Código fuente principal
 │
 ├── capturas/
-│   ├── 01\_menu.png       ← Menú principal
-│   ├── 02\_insertar.png   ← Inserción de empleados
-│   ├── 03\_buscar.png     ← Búsqueda por código
-│   ├── 04\_inorden.png    ← Recorrido inorden
-│   ├── 05\_altura.png     ← Altura y hojas
-│   └── 06\_eliminar.png   ← Eliminación de nodo
+│   ├── 01\\\_menu.png       ← Menú principal
+│   ├── 02\\\_insertar.png   ← Inserción de empleados
+│   ├── 03\\\_buscar.png     ← Búsqueda por código
+│   ├── 04\\\_inorden.png    ← Recorrido inorden
+│   ├── 05\\\_altura.png     ← Altura y hojas
+│   └── 06\\\_eliminar.png   ← Eliminación de nodo
 │
 ├── docs/
 │   └── explicacion.md    ← Explicación teórica
@@ -89,9 +89,9 @@ Código  Nombre               Cargo
 
 ```
             50
-           /  \\
+           /  \\\\
          30    70
-        / \\   / \\
+        / \\\\   / \\\\
        20 40 60  80
 ```
 
@@ -140,12 +140,12 @@ arbol.exe
 
 |Pantalla|Descripción|
 |-|-|
-|`01\_menu.png`|Menú principal del programa|
-|`02\_insertar.png`|Proceso de inserción de un empleado|
-|`03\_buscar.png`|Búsqueda exitosa y fallida|
-|`04\_inorden.png`|Lista ordenada de empleados|
-|`05\_altura.png`|Cálculo de altura y nodos hoja|
-|`06\_eliminar.png`|Eliminación de un nodo|
+|`01\\\_menu.png`|Menú principal del programa|
+|`02\\\_insertar.png`|Proceso de inserción de un empleado|
+|`03\\\_buscar.png`|Búsqueda exitosa y fallida|
+|`04\\\_inorden.png`|Lista ordenada de empleados|
+|`05\\\_altura.png`|Cálculo de altura y nodos hoja|
+|`06\\\_eliminar.png`|Eliminación de un nodo|
 
 \---
 
@@ -153,5 +153,5 @@ arbol.exe
 
 El Árbol Binario de Búsqueda permite organizar información jerárquica de manera eficiente. Gracias a la propiedad BST (izquierda < raíz < derecha), las búsquedas, inserciones y eliminaciones se realizan en tiempo **O(log n)** en el caso promedio, lo que lo hace ideal para representar organigramas y estructuras de datos empresariales.
 
-\---
+
 
